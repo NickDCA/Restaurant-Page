@@ -162,6 +162,35 @@ body {
   flex-direction: column;
 }
 
+.nav__container {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.nav__container .nav__tab-btn {
+  font-family: "Playfair Display", serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: black;
+}
+@keyframes growFromWithin {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.nav__container .nav__tab-btn--selected::after {
+  animation: growFromWithin 0.3s ease forwards;
+  content: "";
+  width: 100%;
+  display: block;
+  border: 1px solid black;
+}
+
 #content {
   flex: 1;
   background: url("../assets/banner-mobile.jpg");
@@ -214,4 +243,53 @@ body {
   font-size: 1.25rem;
   font-weight: 500;
   color: white;
+}
+
+.pizza-cards__container {
+  display: grid;
+  grid-template: 100%/100%;
+  gap: 1rem;
+  width: 100%;
+}
+.pizza-cards__container .pizza-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  gap: 0.75rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  border: 1px solid whitesmoke;
+}
+.pizza-cards__container .pizza-card__title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+}
+.pizza-cards__container .pizza-card__description, .pizza-cards__container .pizza-card__price {
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: white;
+}
+.pizza-cards__container .pizza-card__button {
+  border: 0 solid;
+  border-radius: 0.25rem;
+  line-height: 1.25;
+  background-color: #ff1a1a;
+  padding: 0.5rem;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+}
+.pizza-cards__container .pizza-card__img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 60%;
+  aspect-ratio: 1/1;
 }/*# sourceMappingURL=style.css.map */

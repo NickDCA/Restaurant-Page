@@ -1,0 +1,44 @@
+{
+    "pizzas": [
+        {
+            "title": "Margherita",
+            "description": "Classic pizza with tomato sauce, mozzarella cheese, and fresh basil.",
+            "price": 9.99
+        },
+        {
+            "title": "Pepperoni",
+            "description": "Pizza loaded with pepperoni slices and mozzarella cheese.",
+            "price": 10.99
+        },
+        {
+            "title": "Vegetarian",
+            "description": "Healthy pizza with assorted vegetables like bell peppers, mushrooms, onions, and olives.",
+            "price": 11.99
+        },
+        {
+            "title": "Meat Lovers",
+            "description": "Satisfy your meat cravings with this pizza topped with pepperoni, sausage, bacon, and ham.",
+            "price": 12.99
+        },
+        {
+            "title": "BBQ Chicken",
+            "description": "Delicious pizza featuring BBQ sauce, grilled chicken, onions, and cilantro.",
+            "price": 11.99
+        },
+        {
+            "title": "Hawaiian",
+            "description": "A tropical delight with ham, pineapple chunks, and mozzarella cheese.",
+            "price": 10.99
+        },
+        {
+            "title": "Supreme",
+            "description": "Loaded with a variety of toppings including pepperoni, sausage, bell peppers, onions, and olives.",
+            "price": 13.99
+        },
+        {
+            "title": "Buffalo Chicken",
+            "description": "Spicy buffalo sauce paired with grilled chicken, onions, and blue cheese crumbles.",
+            "price": 12.99
+        }
+    ]
+}

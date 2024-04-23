@@ -1,0 +1,31 @@
+.nav__container {
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    .nav__tab-btn {
+        @keyframes growFromWithin {
+            0% {
+                width: 0;
+            }
+
+            100% {
+                width: 100%;
+            }
+        }
+
+        @include ff-fs-fw-color($playfair, 1rem, 500, black);
+
+        &--selected {
+            &::after {
+                animation: growFromWithin 0.3s ease forwards;
+                content: '';
+                width: 100%;
+                display: block;
+                border: 1px solid black;
+            }
+        }
+    }
+}

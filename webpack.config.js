@@ -28,17 +28,21 @@ module.exports = {
                 ],
             },
             {
-                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
 
                 type: 'asset/resource',
             },
+            // {
+            //     test: /\.webp$/i,
+
+            //     use: 'webp-loader',
+            // },
         ],
     },
     plugins: [
         new HtmlWebpackPlugin({
             template: './src/index.html',
             title: 'Restaurant Page',
-            inject: 'body',
         }),
     ],
 };

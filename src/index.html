@@ -13,10 +13,15 @@
     </head>
     <body>
         <header>
-            <nav>
-                <button>Home</button>
-                <button>Menu</button>
-                <button>About</button>
+            <nav class="nav__container">
+                <button
+                    class="nav__tab-btn nav__tab-btn--selected"
+                    data-nav="home"
+                >
+                    Home
+                </button>
+                <button class="nav__tab-btn" data-nav="menu">Menu</button>
+                <button class="nav__tab-btn" data-nav="about">About</button>
             </nav>
         </header>
         <div id="content"></div>
