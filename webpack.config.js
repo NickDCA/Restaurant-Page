@@ -6,12 +6,12 @@ module.exports = {
     mode: 'development',
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'public'),
         clean: true,
     },
     devtool: 'inline-source-map',
     devServer: {
-        static: './dist',
+        static: './public',
         port: 3000,
     },
     module: {
