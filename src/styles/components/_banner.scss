@@ -5,14 +5,12 @@
     background-size: cover;
     z-index: 1;
     position: relative;
-    // width: 100%;
+    width: 100%;
 
-    display: flex;
-    flex-direction: column;
     padding: 1rem;
-    gap: 1.5rem;
-    // align-items: center;
-    justify-content: flex-start;
+    display: flex;
+
+    justify-content: center;
 
     &::before {
         content: '';
@@ -24,28 +22,69 @@
         background-image: inherit;
         background-size: cover;
         background-position: center;
-        filter: blur(3px) brightness(0.5); /* Adiciona o efeito de desfoque */
+        filter: blur(3px) brightness(0.3); /* Adiciona o efeito de desfoque */
         z-index: -1;
     }
 
-    .headline__title {
-        @include ff-fs-fw-color($playfair, 2rem, 600, white);
-        margin-top: 1rem;
+    .home__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 5rem;
+        width: 80%;
+        .headline__logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            img {
+                width: 4rem;
+                aspect-ratio: 1 / 1;
+                order: 2;
+            }
+            h1 {
+                @include ff-fs-fw-color($esteban, 3rem, 500, lighten(red, 8%));
+                order: 1;
+            }
+        }
+
+        .headline__title {
+            @include ff-fs-fw-color($playfair, 2rem, 600, white);
+            font-style: italic;
+        }
+
+        .headline__text {
+            @include ff-fs-fw-color($lato, 1rem);
+            line-height: 1.25;
+        }
+
+        .headline__button {
+            @include ff-fs-fw-color($lato, 1.25rem, 500, white);
+            align-self: center;
+            border: 0 solid;
+            border-radius: 0.25rem;
+            line-height: 1.25;
+            background-color: lighten(red, 5%);
+            padding: 0.5rem;
+            text-align: center;
+        }
     }
 
-    .headline__text {
-        @include ff-fs-fw-color($lato, 1rem);
-        line-height: 1.25;
-    }
+    @media screen and (min-width: 768px) {
+        .home__container {
+            max-width: 70%;
 
-    .headline__button {
-        align-self: center;
-        border: 0 solid;
-        border-radius: 0.25rem;
-        line-height: 1.25;
-        background-color: lighten(red, 5%);
-        padding: 0.5rem;
-        text-align: center;
-        @include ff-fs-fw-color($lato, 1.25rem, 500, white);
+            .headline__text {
+                font-size: 1.2rem;
+                max-width: 60%;
+                text-align: center;
+            }
+
+            .headline__logo {
+                h1 {
+                    font-size: 4rem;
+                }
+            }
+        }
     }
 }

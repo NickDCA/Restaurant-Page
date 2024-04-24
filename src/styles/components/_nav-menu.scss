@@ -4,28 +4,44 @@
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    position: relative;
+
+    .nav__logo {
+        position: absolute;
+        left: 1%;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        .nav__logo-icon {
+            content: url('../assets/pizza-logo-dark.svg');
+            width: 2.5rem;
+            aspect-ratio: 1 / 1;
+        }
+        .nav__logo-text {
+            display: none;
+        }
+    }
 
     .nav__tab-btn {
-        @keyframes growFromWithin {
-            0% {
-                width: 0;
-            }
+        @include ff-fs-fw-color($playfair, 1rem, 500, black);
+        border-bottom: 2px solid transparent;
+        &--selected {
+            border-bottom: 2px solid black;
+            transition: 0.3s ease-in-out;
+        }
+    }
+}
 
-            100% {
-                width: 100%;
+@media screen and (min-width: 768px) {
+    .nav__container {
+        .nav__logo {
+            .nav__logo-text {
+                display: inline;
+                @include ff-fs-fw-color($esteban, 2rem, 500, lighten(red, 8%));
             }
         }
-
-        @include ff-fs-fw-color($playfair, 1rem, 500, black);
-
-        &--selected {
-            &::after {
-                animation: growFromWithin 0.3s ease forwards;
-                content: '';
-                width: 100%;
-                display: block;
-                border: 1px solid black;
-            }
+        .nav__tab-btn {
+            font-size: 1.25rem;
         }
     }
 }

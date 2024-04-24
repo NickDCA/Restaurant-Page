@@ -22,17 +22,18 @@ export default function buildMenu() {
     const pizzas = Menu.pizzas;
     pizzas.forEach(({ title, description, price }) => {
         const imageKey = title.toLowerCase().replace(' ', '-');
-        console.log(imageKey);
-        console.log(images[`${imageKey}.webp`]);
+        // console.log(imageKey);
+        // console.log(images[`${imageKey}.webp`]);
         const pizzaCard = document.createElement('li');
         pizzaCard.classList.add('pizza-card');
-        // <img url="" alt="${description}" />
         pizzaCard.innerHTML = `
-            <img src="${images[`${imageKey}.webp`]}" class="pizza-card__img">
+            <img src="${
+                images[`${imageKey}.webp`]
+            }" class="pizza-card__img" alt="${description}">
             <h3 class="pizza-card__title">${title}</h3>
             <p class="pizza-card__description">${description}</p>
             <p class="pizza-card__price">$${price}</p>
-            <button class="pizza-card__button">Order</button>
+            <button class="pizza-card__button"><i class="bi bi-bag-plus-fill"></i></button>
         `;
         pizzaCardsList.appendChild(pizzaCard);
     });

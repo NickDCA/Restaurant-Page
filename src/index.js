@@ -1,3 +1,4 @@
+import buildContact from './js/buildContact';
 import buildHome from './js/buildHome';
 import buildMenu from './js/buildMenu';
 import './styles/style.scss';
@@ -8,6 +9,11 @@ tabBtns.forEach((btn) => {
         const destination = btn.dataset.nav;
         console.log(destination);
 
+        document
+            .querySelector('.nav__tab-btn--selected')
+            .classList.toggle('nav__tab-btn--selected');
+        btn.classList.add('nav__tab-btn--selected');
+
         switch (destination) {
             case 'home':
                 buildHome();
@@ -15,8 +21,8 @@ tabBtns.forEach((btn) => {
             case 'menu':
                 buildMenu();
                 break;
-            case 'about':
-                buildAbout();
+            case 'contact':
+                buildContact();
                 break;
             default:
                 break;

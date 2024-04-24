@@ -1,9 +1,26 @@
+import Logo from '../assets/pizza-logo.svg';
+import buildMenu from './buildMenu';
+
 export default function buildHome() {
-    const home = document.querySelector('#content');
-    home.innerHTML = '';
+    const content = document.querySelector('#content');
+    content.innerHTML = '';
+
+    const home = document.createElement('section');
+    home.classList.add('home__container');
+    content.appendChild(home);
+
+    // home LOGO
+    const homeLogo = document.createElement('div');
+    homeLogo.classList.add('headline__logo');
+    homeLogo.innerHTML = `
+        <img alt="logo" src="${Logo}">
+        <h1>BELLA VITA</h1>
+        
+    `;
+    home.appendChild(homeLogo);
 
     // home headline
-    const homeTitle = document.createElement('h1');
+    const homeTitle = document.createElement('h2');
     homeTitle.classList.add('headline__title');
     homeTitle.textContent = 'Taste the Tradition, \nFeel the Passion';
     home.appendChild(homeTitle);
@@ -18,5 +35,14 @@ export default function buildHome() {
     const homeButton = document.createElement('button');
     homeButton.classList.add('headline__button');
     homeButton.textContent = 'Make an order';
+    homeButton.addEventListener('click', (e) => {
+        document
+            .querySelector('.nav__tab-btn--selected')
+            .classList.toggle('nav__tab-btn--selected');
+        document
+            .querySelector('[data-nav=menu]')
+            .classList.add('nav__tab-btn--selected');
+        buildMenu();
+    });
     home.appendChild(homeButton);
 }

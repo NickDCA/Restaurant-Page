@@ -6,14 +6,23 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Esteban&display=swap"
             rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
         />
         <title>Document</title>
     </head>
     <body>
         <header>
             <nav class="nav__container">
+                <div class="nav__logo">
+                    <img alt="" class="nav__logo-icon" />
+                    <h1 class="nav__logo-text">BELLA VITA</h1>
+                </div>
+
                 <button
                     class="nav__tab-btn nav__tab-btn--selected"
                     data-nav="home"
@@ -21,9 +30,16 @@
                     Home
                 </button>
                 <button class="nav__tab-btn" data-nav="menu">Menu</button>
-                <button class="nav__tab-btn" data-nav="about">About</button>
+                <button class="nav__tab-btn" data-nav="contact">Contact</button>
             </nav>
         </header>
         <div id="content"></div>
+        <footer>
+            <p>@ Nicolas David, 2024</p>
+            <div>
+                <i class="bi bi-github"></i>
+                <a href="https://github.com/NickDCA">github.com/NickDCA</a>
+            </div>
+        </footer>
     </body>
 </html>
